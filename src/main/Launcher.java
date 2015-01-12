@@ -24,9 +24,7 @@ public class Launcher {
 
 		tomcat.setPort(Integer.valueOf(webPort));
 
-		
-		tomcat.addWebapp("/gestion", new File(webappDirLocation).getAbsolutePath());
-		
+		tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
 		
 		System.out.println("Configuration de l'application avec baseDir"+new File(webappDirLocation).getAbsolutePath());
 		tomcat.start();
